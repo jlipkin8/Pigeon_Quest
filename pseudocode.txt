@@ -1,0 +1,15 @@
+Work Flow Pseudocode 
+
+    * game intro that makes it known that the user is a pigeon who needs to fly 
+    to point B to deliver a very important message 
+
+    * also set the fly, rest, and eat to 0, 5, 5 respectively
+    
+    * start game: 
+        1. ask if player wants to fly, rest, eat, poop
+        2. check if fly == 5, rest == 0, eat == 0, eat == 4 
+            a. if fly == 5 then destination has been reached, messages delivered
+            b. if rest == 0 then the pigeon needs to rest
+            c. if eat == 0 then the pigeon needs to eat 
+            d. if eat == 4 then the pigeon needs to poop 
+            e. keep asking if the desination has not been reached 
