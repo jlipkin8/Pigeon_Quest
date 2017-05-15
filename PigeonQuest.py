@@ -4,7 +4,14 @@ import time
 def story_intro(): 
     # let the user know they are playing a pigeon 
     # they are tasked with transporting a message from point A to point B
-    print "PIGEON QUEST"
+    print """
+     ____  _                           ____                  __ 
+    / __ \(_)___ ____  ____  ____     / __ \__  _____  _____/ /_
+   / /_/ / / __ `/ _ \/ __ \/ __ \   / / / / / / / _ \/ ___/ __/
+  / ____/ / /_/ /  __/ /_/ / / / /  / /_/ / /_/ /  __(__  ) /_  
+ /_/   /_/\__, /\___/\____/_/ /_/   \___\_\__,_/\___/____/\__/  
+         /____/                                                 
+"""
     time.sleep(.5)
     print "Welcome to PIGEON QUEST"
     print "YOU are a pigeon" 
@@ -61,6 +68,16 @@ def display_main_menu(vitals):
 
 
 def fly(vitals): 
+    print """
+                    ,-' ______
+                    '  .-'  ____7
+                /   /   ___7
+              _|   /  ___7
+            >(')\ | ___7     
+              \\/     \_______
+                '        _======>
+                `'----\\`        
+    """
     vitals["health"] = vitals["health"] - 1
     vitals["distance"] = vitals["distance"] + 1 
 
