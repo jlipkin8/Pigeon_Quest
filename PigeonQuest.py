@@ -21,7 +21,7 @@ def story_intro():
     print "Are you ready?!!!!"
 
 #testing out the story_intro 
-story_intro() 
+# story_intro() 
 
 def display_main_menu(vitals): 
     # asks user for input 
@@ -43,7 +43,7 @@ def display_main_menu(vitals):
         if vitals["distance"] == 5: 
             print "Congratulations you've made it to Point B!"
             break
-        elif vitals["poop_capacity"] > 4: 
+        elif vitals["poop_load"] > 4: 
             print "I recommend you poop"
         elif vitals["health"] < 3: 
             print "I recommend you eat or rest"
@@ -67,6 +67,15 @@ def display_main_menu(vitals):
             print "invalid option, please enter 1, 2, 3, 4, or 5"
 
 
+def map_progress(scalar): 
+    path = " -->" * scalar 
+    # print '{:#<20}'.format('')
+    print "A *",
+    print '{:20}'.format(path),
+    print "* B"
+
+
+
 def fly(vitals): 
     print """
                     ,-' ______
@@ -80,22 +89,38 @@ def fly(vitals):
     """
     vitals["health"] = vitals["health"] - 1
     vitals["distance"] = vitals["distance"] + 1 
+    map_progress(vitals["distance"])
 
 
 def rest(vitals): 
     vitals["health"] = vitals["health"] + 1 
 
 def poop(vitals): 
-    vitals["poop_capacity"] = vitals["poop_capacity"] - 1
+    vitals["poop_load"] = vitals["poop_load"] - 1
 
 def eat(vitals):
     vitals["health"] = vitals["health"] + 1 
-    vitals["poop_capacity"] = vitals["poop_capacity"] + 1
+    vitals["poop_load"] = vitals["poop_load"] + 1
+
 
 
 vitals = {
     "health": 5,
     "distance": 0, 
-    "poop_capacity": 3
+    "poop_load": 3
 }
-display_main_menu(vitals)
+# display_main_menu(vitals)
+
+import sys
+import time
+
+def restart_line():
+    sys.stdout.write('\r')
+    sys.stdout.flush()
+
+sys.stdout.write('some data')
+sys.stdout.flush()
+time.sleep(2) # wait 2 seconds...
+restart_line()
+sys.stdout.write('other different data')
+sys.stdout.flush()
