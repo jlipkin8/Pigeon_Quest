@@ -43,7 +43,15 @@ def display_main_menu(vitals):
 
     while True: 
         if vitals["distance"] == 5: 
-            print "Congratulations you've made it to Point B!"
+            print """
+                 ___  __   __ _   ___  ____   __  ____  ____  _   
+                / __)/  \ (  ( \ / __)(  _ \ / _\(_  _)/ ___)/ \  
+               ( (__(  O )/    /( (_ \ )   //    \ )(  \___ \\_/  
+                \___)\__/ \_)__) \___/(__\_)\_/\_/(__) (____/(_)  
+            """
+
+            time.sleep(.5)
+            print "you've made it to Point B!"
             break
         elif vitals["poop_load"] > 4: 
             print "I recommend you poop"
@@ -96,10 +104,85 @@ def fly(vitals):
     vitals["health"] = vitals["health"] - 1
     vitals["distance"] = vitals["distance"] + 1 
     map_progress(vitals["distance"])
-
+    time.sleep(1)
+    subprocess.call("clear")
 
 def rest(vitals): 
     vitals["health"] = vitals["health"] + 1 
+    print """
+     //////////////
+               ///
+             ///
+           ///
+         ///
+       ///
+     ///
+    //////////////
+    """
+    time.sleep(1)
+    subprocess.call("clear")
+
+    print """ 
+    /////////////
+              //
+            //
+          //
+        //
+      //
+    //
+    ////////////
+    """
+    time.sleep(1)
+    subprocess.call("clear")
+
+    print """ 
+    //////////
+           //
+         //
+       //
+     //
+    ////////// 
+    """
+    time.sleep(1)
+    subprocess.call("clear")
+
+    print """ 
+        ///////
+            //
+          //
+        //
+        ////// """ 
+
+    time.sleep(1)
+    subprocess.call("clear")
+
+    print """ 
+        /////
+           /
+          /
+         /
+        /////
+    """ 
+    time.sleep(1)
+    subprocess.call("clear")
+
+
+    print """ 
+        /////
+           /
+          /
+        /////
+    """ 
+
+    time.sleep(1)
+    subprocess.call("clear")
+
+    print """ 
+        Z
+    """ 
+    
+    time.sleep(1)
+    subprocess.call("clear")
 
 def poop(vitals): 
     vitals["poop_load"] = vitals["poop_load"] - 1
