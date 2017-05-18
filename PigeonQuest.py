@@ -1,5 +1,7 @@
 
 import time 
+import sys
+import subprocess
 
 def story_intro(): 
     # let the user know they are playing a pigeon 
@@ -47,8 +49,10 @@ def display_main_menu(vitals):
             print "I recommend you poop"
         elif vitals["health"] < 3: 
             print "I recommend you eat or rest"
-
-        pigeon_input = raw_input(pigeon_options)
+               
+        pigeon_input = raw_input(pigeon_options) 
+        subprocess.call("clear")
+        
         if (pigeon_input == "1") and vitals["health"] >= 3: 
             print "fly"
             fly(vitals)
@@ -77,6 +81,8 @@ def map_progress(scalar):
 
 
 def fly(vitals): 
+    
+
     print """
                     ,-' ______
                     '  .-'  ____7
@@ -109,18 +115,14 @@ vitals = {
     "distance": 0, 
     "poop_load": 3
 }
-# display_main_menu(vitals)
 
-import sys
-import time
+display_main_menu(vitals)
 
-def restart_line():
-    sys.stdout.write('\r')
-    sys.stdout.flush()
 
-sys.stdout.write('some data')
-sys.stdout.flush()
-time.sleep(2) # wait 2 seconds...
-restart_line()
-sys.stdout.write('other different data')
-sys.stdout.flush()
+
+# for i in range(10):
+#     print '\r',         # print is Ok, and comma is needed.
+#     time.sleep(0.3)
+#     print i,
+#     sys.stdout.flush()  # fl
+
