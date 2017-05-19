@@ -2,6 +2,7 @@
 import time 
 import sys
 import subprocess
+import actions
 
 def story_intro(): 
     # let the user know they are playing a pigeon 
@@ -63,134 +64,20 @@ def display_main_menu(vitals):
         
         if (pigeon_input == "1") and vitals["health"] >= 3: 
             print "fly"
-            fly(vitals)
+            actions.fly(vitals)
         elif pigeon_input == "2": 
             print "rest"
-            rest(vitals)
+            actions.rest(vitals)
         elif pigeon_input == "3": 
             print "Poop"
-            poop(vitals)
+            actions.poop(vitals)
         elif pigeon_input == "4": 
             print "Eat"
-            eat(vitals)
+            actions.eat(vitals)
         elif pigeon_input == "5": 
             break 
         else: 
             print "invalid option, please enter 1, 2, 3, 4, or 5"
-
-
-def map_progress(scalar): 
-    path = " -->" * scalar 
-    # print '{:#<20}'.format('')
-    print "A *",
-    print '{:20}'.format(path),
-    print "* B"
-
-
-
-def fly(vitals): 
-    
-
-    print """
-                    ,-' ______
-                    '  .-'  ____7
-                /   /   ___7
-              _|   /  ___7
-            >(')\ | ___7     
-              \\/     \_______
-                '        _======>
-                `'----\\`        
-    """
-    vitals["health"] = vitals["health"] - 1
-    vitals["distance"] = vitals["distance"] + 1 
-    map_progress(vitals["distance"])
-    time.sleep(1)
-    subprocess.call("clear")
-
-def rest(vitals): 
-    vitals["health"] = vitals["health"] + 1 
-    print """
-     //////////////
-               ///
-             ///
-           ///
-         ///
-       ///
-     ///
-    //////////////
-    """
-    time.sleep(1)
-    subprocess.call("clear")
-
-    print """ 
-    /////////////
-              //
-            //
-          //
-        //
-      //
-    //
-    ////////////
-    """
-    time.sleep(1)
-    subprocess.call("clear")
-
-    print """ 
-    //////////
-           //
-         //
-       //
-     //
-    ////////// 
-    """
-    time.sleep(1)
-    subprocess.call("clear")
-
-    print """ 
-        ///////
-            //
-          //
-        //
-        ////// """ 
-
-    time.sleep(1)
-    subprocess.call("clear")
-
-    print """ 
-        /////
-           /
-          /
-         /
-        /////
-    """ 
-    time.sleep(1)
-    subprocess.call("clear")
-
-
-    print """ 
-        /////
-           /
-          /
-        /////
-    """ 
-
-    time.sleep(1)
-    subprocess.call("clear")
-
-    print """ 
-        Z
-    """ 
-    
-    time.sleep(1)
-    subprocess.call("clear")
-
-def poop(vitals): 
-    vitals["poop_load"] = vitals["poop_load"] - 1
-
-def eat(vitals):
-    vitals["health"] = vitals["health"] + 1 
-    vitals["poop_load"] = vitals["poop_load"] + 1
-
 
 
 vitals = {
