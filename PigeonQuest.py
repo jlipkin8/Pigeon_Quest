@@ -63,16 +63,16 @@ def display_main_menu(vitals):
         subprocess.call("clear")
         
         if (pigeon_input == "1") and vitals["health"] >= 3: 
-            print "fly"
+            # print "fly"
             actions.fly(vitals)
         elif pigeon_input == "2": 
-            print "rest"
+            # print "rest"
             actions.rest(vitals)
         elif pigeon_input == "3": 
-            print "Poop"
+            # print "Poop"
             actions.poop(vitals)
         elif pigeon_input == "4": 
-            print "Eat"
+            # print "Eat"
             actions.eat(vitals)
         elif pigeon_input == "5": 
             break 
