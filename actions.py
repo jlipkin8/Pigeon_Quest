@@ -17,14 +17,13 @@ def fly(vitals):
     
 
     print """
-                    ,-' ______
-                    '  .-'  ____7
-                /   /   ___7
-              _|   /  ___7
-            >(')\ | ___7     
-              \\/     \_______
-                '        _======>
-                `'----\\`        
+      _______
+      `-----.\       _____,
+       `---- \\  .-./.---`
+     ,__`---. `-`  '>---`
+     `,_.-.       /`.-`
+           ',___.'
+                    
     """
     vitals["health"] = vitals["health"] - 1
     vitals["distance"] = vitals["distance"] + 1 
@@ -232,3 +231,137 @@ def eat(vitals):
     vitals["health"] = vitals["health"] + 1 
     vitals["poop_load"] = vitals["poop_load"] + 1
 
+    print """
+         __
+     __ {_/ 
+     \_}\\\\
+        _\\(_)_
+       (_)_)(_)_
+      (_)(_)_)(_)
+       (_)(_))_)
+        (_(_(_)
+         (_)_)
+          (_)
+    """
+    time.sleep(.1)
+    subprocess.call("clear")
+
+    print """
+         __
+     __ {_/ 
+     \_}\\\\
+        _\\(_)_
+       (_)_)(_)_
+      (_)(_)_)(_)
+       (_)(_))_)
+        (_(_(_)
+         (_)_)
+        
+    """
+    time.sleep(.1)
+    subprocess.call("clear")
+
+    print """
+         __
+     __ {_/ 
+     \_}\\\\
+        _\\(_)_
+       (_)_)(_)_
+      (_)(_)_)(_)
+       (_)(_))_)
+        (_(_(_)
+         
+        
+    """
+    time.sleep(.1)
+    subprocess.call("clear")
+
+    print """
+         __
+     __ {_/ 
+     \_}\\\\
+        _\\(_)_
+       (_)_)(_)_
+      (_)(_)_)(_)
+       (_)(_))_)
+        
+         
+        
+    """
+    time.sleep(.1)
+    subprocess.call("clear")
+
+    print """
+         __
+     __ {_/ 
+     \_}\\\\
+        _\\(_)_
+       (_)_)(_)_
+      (_)(_)_)(_)
+       
+        
+         
+        
+    """
+    time.sleep(.1)
+    subprocess.call("clear")
+
+    print """
+         __
+     __ {_/ 
+     \_}\\\\
+        _\\(_)_
+       (_)_)(_)_
+      
+       
+        
+         
+        
+    """
+    time.sleep(.1)
+    subprocess.call("clear")
+
+    print """
+         __
+     __ {_/ 
+     \_}\\\\
+        _\\(_)_
+       
+      
+       
+        
+         
+        
+    """
+    time.sleep(.1)
+    subprocess.call("clear")
+
+    print """
+         __
+     __ {_/ 
+     \_}\\\\
+        
+       
+      
+       
+        
+         
+        
+    """
+
+    time.sleep(.1)
+    subprocess.call("clear")
+
+    print """ 
+
+    ____    ____  __    __  .___  ___.  __  
+    \   \  /   / |  |  |  | |   \/   | |  | 
+     \   \/   /  |  |  |  | |  \  /  | |  | 
+      \_    _/   |  |  |  | |  |\/|  | |  | 
+        |  |     |  `--'  | |  |  |  | |__| 
+        |__|      \______/  |__|  |__| (__) 
+                                            
+    """
+
+    time.sleep(1)
+    subprocess.call("clear")

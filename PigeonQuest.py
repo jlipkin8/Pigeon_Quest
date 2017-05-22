@@ -21,7 +21,7 @@ def story_intro():
     time.sleep(.5)
     print "You must transport a very important message from Point A to Point B."
     time.sleep(.5)
-    print "Are you ready?!!!!"
+    print "Get ready!!!!"
 
 #testing out the story_intro 
 # story_intro() 
@@ -63,16 +63,12 @@ def display_main_menu(vitals):
         subprocess.call("clear")
         
         if (pigeon_input == "1") and vitals["health"] >= 3: 
-            # print "fly"
             actions.fly(vitals)
         elif pigeon_input == "2": 
-            # print "rest"
             actions.rest(vitals)
         elif pigeon_input == "3": 
-            # print "Poop"
             actions.poop(vitals)
         elif pigeon_input == "4": 
-            # print "Eat"
             actions.eat(vitals)
         elif pigeon_input == "5": 
             break 
@@ -86,13 +82,9 @@ vitals = {
     "poop_load": 3
 }
 
+cities = {
+    "Chicoogo"
+, "Santa Coos", "Pigeon Point"}
+
 display_main_menu(vitals)
-
-
-
-# for i in range(10):
-#     print '\r',         # print is Ok, and comma is needed.
-#     time.sleep(0.3)
-#     print i,
-#     sys.stdout.flush()  # fl
 
